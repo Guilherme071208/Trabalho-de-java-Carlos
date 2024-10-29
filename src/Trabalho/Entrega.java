@@ -52,7 +52,7 @@ public class Entrega {
 		frmEntregaJ.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 15));
 		frmEntregaJ.setTitle("Entrega já");
 		frmEntregaJ.setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\André Gomes\\Downloads\\entrega-rapida.png"));
-		frmEntregaJ.setBounds(100, 100, 842, 418);
+		frmEntregaJ.setBounds(100, 100, 621, 426);
 		frmEntregaJ.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmEntregaJ.getContentPane().setLayout(null);
 		
@@ -81,6 +81,12 @@ public class Entrega {
 		menuBar.add(mnNewMenu_1);
 		
 		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Novo Atacarejo");
+		mntmNewMenuItem_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				NovoAtacarejo novo1=new NovoAtacarejo();
+				novo1.setVisible(true);
+			}
+		});
 		mnNewMenu_1.add(mntmNewMenuItem_1);
 		
 		JMenu mnNewMenu_4 = new JMenu("Farmácia");
@@ -88,21 +94,39 @@ public class Entrega {
 		menuBar.add(mnNewMenu_4);
 		
 		JMenuItem mntmNewMenuItem = new JMenuItem("Drograsil");
+		mntmNewMenuItem.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Drogasil novo2=new Drogasil();
+				novo2.setVisible(true);
+			}
+		});
 		mnNewMenu_4.add(mntmNewMenuItem);
-		
-		JMenu mnNewMenu_2 = new JMenu("Pet");
-		mnNewMenu_2.setFont(new Font("Segoe UI", Font.BOLD, 15));
-		menuBar.add(mnNewMenu_2);
-		
-		JMenuItem mntmNewMenuItem_2 = new JMenuItem("Zee now");
-		mnNewMenu_2.add(mntmNewMenuItem_2);
 		
 		JMenu mnNewMenu_3 = new JMenu("Bebidas");
 		mnNewMenu_3.setFont(new Font("Segoe UI", Font.BOLD, 15));
 		menuBar.add(mnNewMenu_3);
 		
 		JMenuItem mntmNewMenuItem_3 = new JMenuItem("Birita House");
+		mntmNewMenuItem_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				BiritaHouse novo3=new BiritaHouse();
+				novo3.setVisible(true);
+			}
+		});
 		mnNewMenu_3.add(mntmNewMenuItem_3);
+		
+		JMenu mnNewMenu_2 = new JMenu("Pet");
+		mnNewMenu_2.setFont(new Font("Segoe UI", Font.BOLD, 15));
+		menuBar.add(mnNewMenu_2);
+		
+		JMenuItem mntmNewMenuItem_2 = new JMenuItem("Zee now");
+		mntmNewMenuItem_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ZeeNow novo4=new ZeeNow();
+				novo4.setVisible(true);
+			}
+		});
+		mnNewMenu_2.add(mntmNewMenuItem_2);
 		
 		JMenu mnNewMenu_5 = new JMenu("Shopping");
 		mnNewMenu_5.setFont(new Font("Segoe UI", Font.BOLD, 15));
@@ -111,15 +135,27 @@ public class Entrega {
 		JMenuItem mntmNewMenuItem_4 = new JMenuItem("Ri Happy tacaruna");
 		mnNewMenu_5.add(mntmNewMenuItem_4);
 		
-		JMenuItem mntmOBoticrio = new JMenuItem("O boticário - Patteo");
-		mnNewMenu_5.add(mntmOBoticrio);
-		
 		JMenu mnNewMenu_6 = new JMenu("Início");
 		mnNewMenu_6.setFont(new Font("Segoe UI", Font.BOLD, 15));
 		menuBar.add(mnNewMenu_6);
 		
 		JMenuItem mntmNewMenuItem_5 = new JMenuItem("Cadastro");
+		mntmNewMenuItem_5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Cadastro novo7=new Cadastro();
+				novo7.setVisible(true);
+			}
+		});
 		mnNewMenu_6.add(mntmNewMenuItem_5);
+		
+		JMenuItem mntmNewMenuItem_7 = new JMenuItem("Fale Conosco");
+		mntmNewMenuItem_7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				FaleConosco novo8=new FaleConosco();
+				novo8.setVisible(true);
+			}
+		});
+		mnNewMenu_6.add(mntmNewMenuItem_7);
 		
 		JLabel lblNewLabel = new JLabel("Entrega já");
 		lblNewLabel.setBackground(new Color(255, 255, 255));
@@ -128,14 +164,24 @@ public class Entrega {
 		lblNewLabel.setBounds(10, 11, 115, 57);
 		frmEntregaJ.getContentPane().add(lblNewLabel);
 		
-		JButton btnNewButton_1 = new JButton("");
+		JButton btnNewButton_1 = new JButton("Saída");
+		btnNewButton_1.setFont(new Font("Arial", Font.BOLD, 12));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frmEntregaJ.setVisible(false);
 			}
 		});
-		btnNewButton_1.setIcon(new ImageIcon("C:\\Users\\André Gomes\\Downloads\\Design sem nome.jpg"));
-		btnNewButton_1.setBounds(645, 342, 50, 37);
+		btnNewButton_1.setBounds(526, 353, 66, 26);
 		frmEntregaJ.getContentPane().add(btnNewButton_1);
+		
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\André Gomes\\Downloads\\Capturar caixa entrega.PNG"));
+		lblNewLabel_1.setBounds(10, 79, 304, 297);
+		frmEntregaJ.getContentPane().add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\André Gomes\\Downloads\\Capturar caixa entrega2.PNG"));
+		lblNewLabel_2.setBounds(324, 104, 268, 238);
+		frmEntregaJ.getContentPane().add(lblNewLabel_2);
 	}
 }
